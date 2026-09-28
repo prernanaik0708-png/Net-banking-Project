@@ -2,9 +2,6 @@ import tkinter as tk
 from tkinter import messagebox, simpledialog
 from datetime import datetime
 
-
-
-
 USERNAME = "Prerna"
 PASSWORD = "1234"
 
@@ -15,9 +12,6 @@ transactions = [
 ]
 
 loans = []
-
-
-
 
 def login():
     username = username_entry.get()
@@ -32,8 +26,6 @@ def login():
             "Invalid username or password!"
         )
 
-
-
 def open_dashboard():
 
     global balance
@@ -42,7 +34,6 @@ def open_dashboard():
     dashboard.title("Simple Net Banking System")
     dashboard.geometry("700x600")
     dashboard.resizable(False, False)
-
 
     header = tk.Frame(dashboard)
     header.pack(fill="x", pady=15)
@@ -58,7 +49,6 @@ def open_dashboard():
         text="Welcome, Prerna",
         font=("Arial", 12)
     ).pack(pady=5)
-
 
     balance_frame = tk.LabelFrame(
         dashboard,
@@ -84,7 +74,6 @@ def open_dashboard():
         balance_label.config(
             text=f"₹ {balance:.2f}"
         )
-
 
     def account_section():
 
@@ -112,7 +101,6 @@ def open_dashboard():
             font=("Arial", 12),
             justify="left"
         ).pack(pady=20)
-
 
     def deposit_money():
 
