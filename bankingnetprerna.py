@@ -3,9 +3,7 @@ from tkinter import messagebox, simpledialog
 from datetime import datetime
 
 
-# =========================
-# BANK DATA
-# =========================
+
 
 USERNAME = "Prerna"
 PASSWORD = "1234"
@@ -19,9 +17,7 @@ transactions = [
 loans = []
 
 
-# =========================
-# LOGIN
-# =========================
+
 
 def login():
     username = username_entry.get()
@@ -37,9 +33,6 @@ def login():
         )
 
 
-# =========================
-# DASHBOARD
-# =========================
 
 def open_dashboard():
 
@@ -50,7 +43,6 @@ def open_dashboard():
     dashboard.geometry("700x600")
     dashboard.resizable(False, False)
 
-    # ---------- Header ----------
 
     header = tk.Frame(dashboard)
     header.pack(fill="x", pady=15)
@@ -67,7 +59,6 @@ def open_dashboard():
         font=("Arial", 12)
     ).pack(pady=5)
 
-    # ---------- Balance ----------
 
     balance_frame = tk.LabelFrame(
         dashboard,
@@ -94,9 +85,6 @@ def open_dashboard():
             text=f"₹ {balance:.2f}"
         )
 
-    # =========================
-    # ACCOUNT
-    # =========================
 
     def account_section():
 
@@ -125,9 +113,6 @@ def open_dashboard():
             justify="left"
         ).pack(pady=20)
 
-    # =========================
-    # DEPOSIT
-    # =========================
 
     def deposit_money():
 
@@ -165,9 +150,6 @@ def open_dashboard():
             f"₹{amount:.2f} deposited successfully!"
         )
 
-    # =========================
-    # WITHDRAW
-    # =========================
 
     def withdraw_money():
 
@@ -212,9 +194,6 @@ def open_dashboard():
             f"₹{amount:.2f} withdrawn successfully!"
         )
 
-    # =========================
-    # TRANSACTION HISTORY
-    # =========================
 
     def transaction_history():
 
@@ -244,9 +223,6 @@ def open_dashboard():
                 justify="left"
             ).pack(anchor="w", padx=30, pady=5)
 
-    # =========================
-    # LOAN
-    # =========================
 
     def loan_section():
 
@@ -375,9 +351,6 @@ def open_dashboard():
             command=show_loans
         ).pack()
 
-    # =========================
-    # CARD SECTION
-    # =========================
 
     def card_section():
 
@@ -424,9 +397,6 @@ def open_dashboard():
             justify="left"
         ).pack(pady=15)
 
-    # =========================
-    # CUSTOMER SERVICE
-    # =========================
 
     def customer_service():
 
@@ -491,9 +461,6 @@ def open_dashboard():
             font=("Arial", 11)
         ).pack(pady=15)
 
-    # =========================
-    # CHANGE PASSWORD
-    # =========================
 
     def change_password():
 
@@ -532,10 +499,6 @@ def open_dashboard():
             "Password changed successfully!"
         )
 
-    # =========================
-    # LOGOUT
-    # =========================
-
     def logout():
 
         dashboard.destroy()
@@ -545,9 +508,7 @@ def open_dashboard():
             "You have been logged out."
         )
 
-    # =========================
-    # BUTTONS
-    # =========================
+   
 
     button_frame = tk.Frame(dashboard)
     button_frame.pack(pady=15)
@@ -617,10 +578,6 @@ def open_dashboard():
 
     dashboard.mainloop()
 
-
-# =========================
-# LOGIN WINDOW
-# =========================
 
 login_window = tk.Tk()
 
